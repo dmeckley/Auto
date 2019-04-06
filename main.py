@@ -65,6 +65,7 @@ def main():
     truck.setTransmission("AT")
     truck.setDriveTrain("2WD")
     truck.setBed("Long")
+    truck.setCab("Standard")
     truckRepr = repr(truck)
     truckStr = str(truck)
     print('truck -->', truck)

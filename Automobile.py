@@ -99,7 +99,7 @@ class Car(Auto):
 class Truck(Auto):
 
     # Constructor Method:
-    def __init__(self, year=None, make=None, model=None, engine=None, transmission=None, drivetrain=None, bed=None):
+    def __init__(self, year=None, make=None, model=None, engine=None, transmission=None, drivetrain=None, bed=None, cab=None):
         # Default and Overloaded Constructor Method:
 
         # Call Base Class Method (Inheritance):
@@ -107,22 +107,29 @@ class Truck(Auto):
 
         # Set Truck Class Data Attributes:
         self.__bed = bed
+        self.__cab = cab
 
     # Mutator Methods:
     def setBed(self, bed):
         self.__bed = bed
 
+    def setCab(self, cab):
+        self.__cab = cab
+
     # Accessor Methods:
     def getBed(self):
         return(self.__bed)
 
+    def getCab(self):
+        return(self.__cab)
+
     # Object Representation Method:
     def __repr__(self):
-        return(super().__repr__() + " {!r}bed".format(self.getBed()))
+        return(super().__repr__() + " {!r}bed {!r}cab".format(self.getBed(), self.getCab()))
 
     # Object String Method:
     def __str__(self):
-        return(super().__str__ () + " {0}bed".format(self.getBed()))
+        return(super().__str__ () + " {0}bed {1}cab".format(self.getBed(), self.getCab()))
 
 
 # DERIVED CLASS:

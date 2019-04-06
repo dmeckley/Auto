@@ -79,7 +79,6 @@ def main():
     print('suv -->', suv)
     print('repr(suv) -->', suvRepr)
     print('str(suv) -->', suvStr)
-    print()
 
 
 if __name__ == "__main__":

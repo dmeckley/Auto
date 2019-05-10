@@ -3,14 +3,14 @@
 # Base Class --> Auto
 # Derived Classes --> Car, Truck, SUV
 
-import Automobile
+import automobile
 
 
 def main():
 
     # Creation of Auto object instance using constructor w/params:
     print()
-    auto = Automobile.Auto(2005, 'Dodge', 'Dakota', 'V6', 'AT', '4WD')
+    auto = automobile.Automobile(2005, 'Dodge', 'Dakota', 'V6', 'AT', '4WD')
     autoRepr = repr(auto)
     autoStr = str(auto)
     print('auto -->', auto)
@@ -19,7 +19,7 @@ def main():
 
     # Creation of Auto object instance using default constructor w/o params:
     print()
-    newAuto = Automobile.Auto()
+    newAuto = automobile.Automobile()
     newAutoRepr = repr(newAuto)
     newAutoStr = str(newAuto)
     print('newAuto -->', newAuto)
@@ -42,7 +42,7 @@ def main():
 
     # Creation of a derived Car object instance inheriting from the Auto base class: 
     print()
-    car = Automobile.Car()
+    car = automobile.Car()
     car.setYear(1969)
     car.setMake("Chevy")
     car.setModel("Chevelle")
@@ -57,7 +57,7 @@ def main():
     print('str(car) -->', carStr)
 
     print()
-    truck = Automobile.Truck()
+    truck = automobile.Truck()
     truck.setYear(1957)
     truck.setMake("Chevy")
     truck.setModel("Cameo")
@@ -65,7 +65,6 @@ def main():
     truck.setTransmission("AT")
     truck.setDriveTrain("2WD")
     truck.setBed("Long")
-    truck.setCab("Standard")
     truckRepr = repr(truck)
     truckStr = str(truck)
     print('truck -->', truck)
@@ -73,12 +72,13 @@ def main():
     print('str(truck) -->', truckStr)
 
     print()
-    suv = Automobile.SUV(2001, "Cadillac", "Escalade", "V8", "AT", "2WD", 8)
+    suv = automobile.SUV(2001, "Cadillac", "Escalade", "V8", "AT", "2WD", 8)
     suvRepr = repr(suv)
     suvStr = str(suv)
     print('suv -->', suv)
     print('repr(suv) -->', suvRepr)
     print('str(suv) -->', suvStr)
+    print()
 
 
 if __name__ == "__main__":
